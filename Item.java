@@ -16,14 +16,39 @@ public class Item {
     private String name;
     private String brandName;
     private List suppliers;
-    HashMap<String, Integer> prices = new HashMap<String, Integer>();
+    private List<Bundle> packages;
+    private double unitPrice;
+    HashMap<String, Double> prices = new HashMap<>();
 
-    public Item(String name, String brandName, List suppliers) {
+    public Item(String name, String brandName, List suppliers, List<Bundle> packages, double unitPrice) {
         this.name = name;
         this.brandName = brandName;
         this.suppliers = suppliers;
+        this.packages = packages;
+        this.unitPrice = unitPrice;
     }
 
+    public List<Bundle> getPackages() {
+        return packages;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setPackages(List<Bundle> packages) {
+        this.packages = packages;
+    }
+
+    public void setSuppliers(List suppliers) {
+        this.suppliers = suppliers;
+    }
+
+    public void setUnitPrice(Double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+      
+   
     public String getBrandName() {
         return brandName;
     }
@@ -48,15 +73,15 @@ public class Item {
         return suppliers;
     }
 
-    public HashMap<String, Integer> getPrices() {
+    public HashMap<String, Double> getPrices() {
         return prices;
     }
 
-    public void setPrices(HashMap<String, Integer> prices) {
+    public void setPrices(HashMap<String, Double> prices) {
         this.prices = prices;
     }
     
-    
+    public void setSellPrice(double price){}
     
  
     
