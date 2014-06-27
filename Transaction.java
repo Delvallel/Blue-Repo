@@ -1,3 +1,5 @@
+package Logic;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +11,7 @@ import java.util.List;
  *
  * @author Win 7
  */
-public class Transaction {
+public class Transaction{
     
     private String inVoice;
     private int term;
@@ -17,6 +19,16 @@ public class Transaction {
     private double price; //data type in diagram is int
     private String name; 
     private List<Item> items;
+    private WRInventory wsr;
+
+    public WRInventory getWsr() {
+        return wsr;
+    }
+
+    public void setWsr(WRInventory wsr) {
+        this.wsr = wsr;
+    }
+    
 
     public Date getDeadline() {
         return deadline;
