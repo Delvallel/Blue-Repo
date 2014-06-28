@@ -19,6 +19,14 @@ public class Item {
     private List<Bundle> packages;
     private double unitPrice;
     HashMap<String, Double> prices = new HashMap<>();
+	
+    public Item(String name, String brandName, List suppliers, double unitPrice) {//made for testing
+        this.name = name;
+        this.brandName = brandName;
+        this.suppliers = suppliers;
+        this.packages = packages;
+        this.unitPrice = unitPrice;
+    }
 
     public Item(String name, String brandName, List suppliers, List<Bundle> packages, double unitPrice) {
         this.name = name;

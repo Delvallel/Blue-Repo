@@ -12,6 +12,10 @@ public class Supplier {
     private List<Item> supplies;
     private String name;
 
+    public Supplier(String name) {//made for testing
+        this.name = name;
+    }
+
     public Supplier(List<Item> supplies, String name) {
         this.supplies = supplies;
         this.name = name;
